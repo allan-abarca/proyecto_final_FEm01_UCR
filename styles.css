@@ -1,40 +1,48 @@
+@font-face {
+    font-family: 'caveat-Regular';
+    src: url('/proyecto_final/Caveat-Regular.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 body{
-    background-color:rgb(137, 185, 234);
+    background-color: #f0f0f0;
     padding: 0 50px;
     margin-top: 100px;
-}
-
-.hero-image{
-    max-width: 800px;
-    width: 100%;
+    font-family: 'caveat-Regular';
 }
 
 .inicio{
     position: fixed;
-    /* top: 100;  */
     left: 0;
     width: 100%;
-    /* padding: 10px 50px 0 50px; */
-    /* margin: 0 0 0 20px; */
     z-index: 1000;
-    
-    /* margin-right: 50px; */
     margin-top: -100px;
 }
 
+h1, h2, p{
+    color: #431b73;
+}
+
+.gatodemia, .gatofesores, .galeria, .contacto{
+    margin: 20px 0;
+}
+
 .inicio-container{
-    background-color: #a4a1a1;
+    background-color: #ff9229;
     margin: 0 50px;
+    font-size: 20px;
+}
+
+@media(max-width: 600px){
+    .inicio-container{
+        font-size: 15px;
+    }
 }
 
 .menu {
-    /* position: fixed; */
-    /* top: 100;
-    left: 0; */
-    /* width: 100%; */
-    background-color: #333;
+    background-color: #7b2e8e;
     padding: 10px 50px;
-    /* z-index: 1000; */
 }
 
 .menu ul {
@@ -49,10 +57,6 @@ body{
     margin-right: 20px;
 }
 
-/* .menu ul li:last-child {
-    margin-right: 0;
-} */
-
 .menu ul li a {
     color: #fff;
     text-decoration: none;
@@ -62,7 +66,7 @@ body{
 }
 
 .menu ul li a:hover {
-    background-color: #555;
+    background-color: #ff9229;
 }
 
 @keyframes colorChange {
@@ -74,17 +78,107 @@ body{
     }
   }
   
-  .hero-image {
-    animation: colorChange 5s linear infinite;
+  .div-hero-image{
+    display: flex;
+    justify-content: center;
   }
 
+  .hero-image {
+    max-width: 1200px;
+    width: 100%;
+    animation: colorChange 5s linear infinite;
+    margin: 20px 0;
+  }
 
+.gatodemia p{
+    font-size: 25px;
+    text-align: justify;
+}
 
+.card{
+    max-width: 450px;
+    margin-bottom: 20px;
+}
 
+.card:hover{
+    scale: 1.04;
+    box-shadow: 3px 3px 10px #431b73;
+}
+
+.card-title{
+    color: #431b73;
+}
+
+.card-text{
+    font-size: 20px;
+}
+
+@media(max-width: 767px){
+    .card{
+        max-width: 400px;
+    }
+    .col{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#carouselExampleIndicators{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .carousel-indicators button:hover {
-    background-color: rgb(216, 200, 200);
+    background-color: #ff9229;
 }
+
+.contacto{
+    color: #431b73;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container{
+    font-size: 25px;
+    width: 600px;
+    margin-top: 15px;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+}
+
+.campo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  label {
+    flex: 1;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"],
+  textarea,
+  select {
+    flex: 2;
+  }
 
 footer{
     display: flex;
@@ -94,9 +188,34 @@ footer{
     padding: 10px 0;
 }
 
-footer img {
+.boton{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton button{
+    background-color: #7b2e8e;
+    color: white;
+    border-radius: 5px;
+}
+
+.boton button:hover{
+    background-color: #ff9229;
+    color: #7b2e8e;
+}
+
+@media(max-width: 767px){
+    .form-container{
+        font-size: 15px;
+        width: 400px;
+    }
+}
+
+footer svg {
     height: 30px;
     width: 30px;
+    fill: #431b73;
 }
 
 footer div{
@@ -105,4 +224,20 @@ footer div{
 
 footer a{
     margin: 80px 20px;
+}
+
+@media(max-width: 767px){
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 417px){
+    footer svg {
+        height: 15px;
+        width: 15px;
+    }
 }
